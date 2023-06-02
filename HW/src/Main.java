@@ -3,6 +3,7 @@
 В main проинициализировать несколько ГорячихНапитков и ГорячихНапитковАвтомат и воспроизвести логику, заложенную в программе
 Всё вышеуказанное создать согласно принципам ООП, пройденным на семинаре*/
 
+import java.util.Iterator;
 import java.util.LinkedList;
 
 public class Main {
@@ -42,5 +43,9 @@ public class Main {
 
         System.out.println(hwvm.getProduct("americano", 120.0, 70.0, 0.5));
 
+        Iterator<Product> iterator = hwvm.iterator();
+        while (iterator.hasNext()) {
+            System.out.println(iterator.next());
+        }
     }
 }

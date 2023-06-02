@@ -1,7 +1,9 @@
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.LinkedList;
+import java.util.List;
 
-public class HotWaterVendMach implements VendMach {
+public class HotWaterVendMach implements VendMach, Iterable<Product> {
     private LinkedList<Product> hot_waters;
 
     @Override
@@ -23,5 +25,10 @@ public class HotWaterVendMach implements VendMach {
             }
         }
         return need_hw;
+    }
+
+    @Override
+    public Iterator<Product> iterator() {
+        return new HotWaterIterator(hot_waters);
     }
 }
