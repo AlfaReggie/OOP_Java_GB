@@ -1,7 +1,8 @@
+package HW_1_less;
+
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.LinkedList;
-import java.util.List;
 
 public class HotWaterVendMach implements VendMach, Iterable<Product> {
     private LinkedList<Product> hot_waters;

@@ -1,3 +1,5 @@
+package HW_1_less;
+
 import java.util.LinkedList;
 
 public class WaterVendMash implements VendMach {

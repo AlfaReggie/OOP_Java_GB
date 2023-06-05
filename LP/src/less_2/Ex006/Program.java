@@ -1,7 +1,9 @@
 package less_2.Ex006;
 
-import Lesson_08.Ex006.Applications.Notepad;
-import Lesson_08.Ex006.Format.*;
+import less_2.Ex006.Applications.Notepad;
+import less_2.Ex006.Format.Doc;
+import less_2.Ex006.Format.Md;
+import less_2.Ex006.Format.Txt;
 
 public class Program {
     public static void main(String[] args) {

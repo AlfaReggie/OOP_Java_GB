@@ -1,6 +1,6 @@
 package less_2.Ex006.Interface;
 
-import Lesson_08.Ex006.Document.TextDocument;
+import less_2.Ex006.Document.TextDocument;
 
 public interface Saveable {
     void SaveAs(TextDocument document, String path);

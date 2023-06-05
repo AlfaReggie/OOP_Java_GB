@@ -1,3 +1,5 @@
+package HW_1_less;
+
 import java.util.Iterator;
 import java.util.LinkedList;
 
@@ -18,7 +20,7 @@ public class HotWaterIterator implements Iterator<Product> {
     @Override
     public Product next() {
         if (!hasNext()){
-            throw new RuntimeException("Product");
+            throw new RuntimeException("HW_1_less.Product");
         }
 
         return hot_water.get(counter++);

@@ -1,11 +1,7 @@
 package less_2.Ex003;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
-
-import Lesson_08.Ex003.alliance.*;
-import Lesson_08.Ex003.*;
+import less_2.Ex003.*;
+import less_2.Ex003.alliance.*;
 
 public class Program {
     public static void main(String[] args) {

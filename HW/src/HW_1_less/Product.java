@@ -1,7 +1,9 @@
+package HW_1_less;
+
 public abstract class Product {
     // Реализуйте класс Товар, содержащий данные о товаре, и ТорговыйАвтомат,
     // содержащий
-    // в себе методы initProducts (List <Product>) сохраняющий в себе список
+    // в себе методы initProducts (List <HW_1_less.Product>) сохраняющий в себе список
     // исходных продуктов и
     // getProduct(String name)
 

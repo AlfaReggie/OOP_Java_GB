@@ -1,3 +1,5 @@
+package HW_1_less;
+
 public class HotWater extends Water {
     private Double temperature;
     private Double volume;
@@ -16,7 +18,7 @@ public class HotWater extends Water {
 
     @Override
     public String toString() {
-        return "HotWater{" +
+        return "HW_1_less.HotWater{" +
                 "name=" + name + '\'' +
                 ", price=" + price + '\'' +
                 ", temperature=" + temperature +

@@ -1,3 +1,5 @@
+package HW_1_less;
+
 public class Water extends Product {
     @Override
     public String getName() {
@@ -11,7 +13,7 @@ public class Water extends Product {
 
     @Override
     public String toString() {
-        return "Water{" +
+        return "HW_1_less.Water{" +
                 "name='" + name + '\'' +
                 ", price=" + price +
                 '}';

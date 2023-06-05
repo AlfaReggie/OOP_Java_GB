@@ -1,9 +1,9 @@
 package less_2.Ex006.Format;
 
+import less_2.Ex006.Document.TextDocument;
+
 import java.io.FileWriter;
 import java.io.IOException;
-
-import less_2.Ex006.Document.TextDocument;
 
 public class Txt extends TextFormat {
 
