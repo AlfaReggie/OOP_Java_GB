@@ -1,17 +1,13 @@
-package HW_2_less;
+package HW_2_less.Operations;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class StringToList extends HW_2_less.Abstracts.StringToList {
 
     @Override
-    public void setUser_inp(String user_inp) {
-        super.setUser_inp(user_inp);
-    }
-
-    @Override
-    protected List<String> StringToList(String user_inp) {
+    public List<String> StringToList(String user_inp) {
         StringBuilder stringBuilder = new StringBuilder();
         for (int i = 0; i < user_inp.length(); i++) {
             if ((Character.isDigit(user_inp.charAt(i)))) {
@@ -22,7 +18,6 @@ public class StringToList extends HW_2_less.Abstracts.StringToList {
                 stringBuilder.append(" " + user_inp.charAt(i) + " ");
             }
         }
-        return List.of(stringBuilder.toString().split(" "));
+        return new ArrayList<>(Arrays.asList(stringBuilder.toString().split(" ")));
     }
-
 }

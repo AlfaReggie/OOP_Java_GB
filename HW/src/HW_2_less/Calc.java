@@ -1,40 +1,56 @@
 package HW_2_less;
 
-import HW_2_less.Operations.DiffOperation;
-import HW_2_less.Operations.DivOperation;
-import HW_2_less.Operations.MultOperation;
-import HW_2_less.Operations.SumOperation;
+import HW_2_less.Abstracts.MathOperations;
 
-import java.util.List;
+public class Calc extends MathOperations {
+    private Double result_ex = 0.0;
+    public Calc() {
+        super();
+    }
 
-public class Calc {
-    private Double result = 0.0;
-
-    public Double getResult(List<String> expression) {
-        switch (expression.get(1)) {
-            case "+": SumOperation sumOperation = new SumOperation();
-                result = sumOperation.Operation(Double.parseDouble(expression.get(0)),
-                    Double.parseDouble(expression.get(2)));
+    @Override
+    public Double getResult(Double first_number, String operation, Double second_number) {
+        switch (operation) {
+            case "+":
+                result_ex = sum(first_number, second_number);
                 break;
-            case "-": DiffOperation diffOperation = new DiffOperation();
-                result = diffOperation.Operation(Double.parseDouble(expression.get(0)),
-                    Double.parseDouble(expression.get(2)));
+            case "-":
+                result_ex = diff(first_number, second_number);
                 break;
-            case "*": MultOperation multOperation = new MultOperation();
-                result = multOperation.Operation(Double.parseDouble(expression.get(0)),
-                        Double.parseDouble(expression.get(2)));
+            case "*":
+                result_ex = mult(first_number, second_number);
                 break;
-            case "/": DivOperation divOperation = new DivOperation();
-                result = divOperation.Operation(Double.parseDouble(expression.get(0)),
-                        Double.parseDouble(expression.get(2)));
+            case "/":
+                result_ex = div(first_number, second_number);
+                break;
         }
-        return result;
+        return result_ex;
+    }
+
+    @Override
+    public Double sum(Double first_number, Double second) {
+        return first_number + second;
+    }
+
+    @Override
+    public Double diff(Double first_number, Double second) {
+        return first_number - second;
+    }
+
+    @Override
+    public Double mult(Double first_number, Double second) {
+        return first_number * second;
+    }
+
+    @Override
+    public Double div(Double first_number, Double second) {
+        return first_number / second;
     }
 
     @Override
     public String toString() {
         return "Calc{" +
-                "result=" + result +
+                "result=" + result_ex +
                 '}';
     }
 }

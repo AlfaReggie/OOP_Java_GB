@@ -1,19 +1,21 @@
 package HW_2_less;
 
-import java.util.ArrayList;
-import java.util.Arrays;
+import HW_2_less.Abstracts.MathOperations;
+import HW_2_less.Interface.Operations;
+import HW_2_less.Operations.StringToList;
+
 import java.util.List;
+import java.util.Objects;
 
 public class Main {
     public static void main(String[] args) {
-        StringToList stringToList = new StringToList();
-        Calc calc = new Calc();
-        System.out.println(calc.getResult(stringToList.StringToList("1+24")));
-        System.out.println(calc.getResult(stringToList.StringToList("1-24")));
-        System.out.println(calc.getResult(stringToList.StringToList("1*24")));
-        System.out.println(calc.getResult(stringToList.StringToList("1/24")));
-    }
 
+        Calc calculator = new Calc();
+        StringToList stringToList = new StringToList();
+        List<String> exe = stringToList.StringToList("2/3");
+        System.out.println(calculator.getResult(Double.parseDouble(exe.get(0)), exe.get(1),
+                Double.parseDouble(exe.get(2))));
+    }
 }
 
 
