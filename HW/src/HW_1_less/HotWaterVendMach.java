@@ -17,7 +17,7 @@ public class HotWaterVendMach implements VendMach, Iterable<Product> {
         return hot_waters.element();
     }
 
-    public ArrayList<Product> getProduct(String name, Double price, Double temperature, Double volume) {
+    public ArrayList<Product> getProduct(String name, Long price, Double temperature, Double volume) {
         ArrayList<Product> need_hw = new ArrayList<>();
         for (Product hotWater: hot_waters) {
             if (((HotWater)(hotWater)).getTemperature().equals(temperature) && ((HotWater)(hotWater)).getVolume().equals(volume)
@@ -33,13 +33,4 @@ public class HotWaterVendMach implements VendMach, Iterable<Product> {
         return new HotWaterIterator(hot_waters);
     }
 
-    @Override
-    public int compare(Product o1, Product o2) {
-        if (o1.price > o2.price)
-            return 1;
-        else if (o1.price < o2.price)
-            return -1;
-        else
-            return 0;
-    }
 }

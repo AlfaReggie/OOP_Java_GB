@@ -10,7 +10,7 @@ public class HotWater extends Water{
     }
 
 
-    public HotWater(String name, Double price, Double temperature, Double volume) {
+    public HotWater(String name, Long price, Double temperature, Double volume) {
         super(name, price);
         this.temperature = temperature;
         this.volume = volume;
@@ -31,25 +31,24 @@ public class HotWater extends Water{
     }
 
     @Override
-    public Double getPrice() {
+    public long getPrice() {
         return price;
     }
 
     @Override
-    public void setPrice(Double price) {
+    public void setPrice(Long price) {
         super.price = price;
     }
 
     @Override
     public int compareTo(Product o) {
-    if (this.price > o.price)
-        return 1;
-    else if (this.price < o.price)
-        return -1;
-    else
-        return 0;
+        if (this.price > o.price)
+            return 1;
+        else if (this.price < o.price)
+            return -1;
+        else
+            return 0;
     }
-
 
     public Double getTemperature() {
         return temperature;

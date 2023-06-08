@@ -1,12 +1,12 @@
 package HW_1_less;
 
-public abstract class Water extends Product {
+public class Water extends Product {
     @Override
     public String getName() {
         return name;
     }
 
-    public Water(String name, Double price) {
+    public Water(String name, Long price) {
         super.name = name;
         super.price = price;
     }
@@ -25,16 +25,18 @@ public abstract class Water extends Product {
     }
 
     @Override
-    public Double getPrice() {
-        return 0.0;
+    public long getPrice() {
+        return 0L;
     }
 
     @Override
-    public void setPrice(Double price) {
+    public void setPrice(Long price) {
         super.price = price;
     }
 
+    @Override
     public int compareTo(Product o) {
         return 0;
-    };
+    }
+
 }

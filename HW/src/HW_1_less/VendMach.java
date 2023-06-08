@@ -6,5 +6,4 @@ public interface VendMach {
 
     public Product getProduct();
 
-    int compare(Product o1, Product o2);
 }

@@ -14,9 +14,4 @@ public class WaterVendMash implements VendMach {
         return waters.pollLast();
     }
 
-    @Override
-    public int compare(Product o1, Product o2) {
-        return 0;
-    }
-
 }

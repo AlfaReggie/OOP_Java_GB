@@ -10,18 +10,14 @@ public abstract class Product implements Comparable<Product>{
     // getProduct(String name)
 
     protected String name;
-    protected Double price;
+    protected Long price;
 
 
     public abstract String getName();
 
     public abstract void setName(String name);
 
-    public abstract Double getPrice();
+    public abstract long getPrice();
 
-    public abstract void setPrice(Double price);
-
-    @Override
-    public abstract int compareTo(Product o);
-
+    public abstract void setPrice(Long price);
 }

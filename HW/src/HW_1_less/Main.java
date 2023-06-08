@@ -12,8 +12,8 @@ public class Main {
 
         WaterVendMash wvm = new WaterVendMash();
 
-        Product bonAqua = new Water("bonAqua", 50.0) {};
-        Product redKey = new Water("redKey", 60.0) {};
+        Product bonAqua = new Water("bonAqua", 50L);
+        Product redKey = new Water("redKey", 60L);
         LinkedList<Product> l = new LinkedList<>();
         l.add(bonAqua);
         l.add(redKey);
@@ -25,12 +25,12 @@ public class Main {
 
         HotWaterVendMach hwvm = new HotWaterVendMach();
 
-        HotWater latte = new HotWater("latte", 160.0, 70.0, 0.5);
-        HotWater americano = new HotWater("americano", 165.0, 70.0, 0.5);
-        HotWater cappuccino = new HotWater("cappuccino", 180.0, 75.0, 0.6);
-        HotWater americano1 = new HotWater("americano", 120.0, 89.0, 0.4);
-        HotWater americano3 = new HotWater("americano", 200.0, 80.0, 0.4);
-        HotWater americano4 = new HotWater("americano", 115.0, 70.0, 0.5);
+        HotWater latte = new HotWater("latte", 160L, 70.0, 0.5);
+        HotWater americano = new HotWater("americano", 165L, 70.0, 0.5);
+        HotWater cappuccino = new HotWater("cappuccino", 180L, 75.0, 0.6);
+        HotWater americano1 = new HotWater("americano", 120L, 89.0, 0.4);
+        HotWater americano3 = new HotWater("americano", 200L, 80.0, 0.4);
+        HotWater americano4 = new HotWater("americano", 115L, 70.0, 0.5);
 
         LinkedList<Product> hot = new LinkedList<>();
         hot.add(latte);
@@ -42,9 +42,13 @@ public class Main {
 
         hwvm.putProduct(hot);
 
-        System.out.println(hwvm.getProduct("americano", 120.0, 70.0, 0.5));
+        System.out.println(hwvm.getProduct("americano", 120L, 70.0, 0.5));
 
-        hot.sort(Comparator.comparingDouble(o -> o.price));
+        System.out.println("____________________");
+
+        //hot.sort(Comparator.comparingDouble(o -> o.price));
+
+        hot.sort(Comparator.naturalOrder());
 
         Iterator<Product> iterator = hwvm.iterator();
         while (iterator.hasNext()) {
