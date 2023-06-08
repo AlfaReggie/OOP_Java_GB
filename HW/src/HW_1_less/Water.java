@@ -1,6 +1,6 @@
 package HW_1_less;
 
-public class Water extends Product {
+public abstract class Water extends Product {
     @Override
     public String getName() {
         return name;
@@ -33,4 +33,8 @@ public class Water extends Product {
     public void setPrice(Double price) {
         super.price = price;
     }
+
+    public int compareTo(Product o) {
+        return 0;
+    };
 }

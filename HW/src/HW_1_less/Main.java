@@ -3,6 +3,7 @@ package HW_1_less;/*Создать наследника реализованно
 В main проинициализировать несколько ГорячихНапитков и ГорячихНапитковАвтомат и воспроизвести логику, заложенную в программе
 Всё вышеуказанное создать согласно принципам ООП, пройденным на семинаре*/
 
+import java.util.Comparator;
 import java.util.Iterator;
 import java.util.LinkedList;
 
@@ -11,8 +12,18 @@ public class Main {
 
         WaterVendMash wvm = new WaterVendMash();
 
-        Product bonAqua = new Water("bonAqua", 50.0);
-        Product redKey = new Water("redKey", 60.0);
+        Product bonAqua = new Water("bonAqua", 50.0) {
+            @Override
+            public int compareTo(Object o) {
+                return 0;
+            }
+        };
+        Product redKey = new Water("redKey", 60.0) {
+            @Override
+            public int compareTo(Object o) {
+                return 0;
+            }
+        };
         LinkedList<Product> l = new LinkedList<>();
         l.add(bonAqua);
         l.add(redKey);
@@ -42,6 +53,8 @@ public class Main {
         hwvm.putProduct(hot);
 
         System.out.println(hwvm.getProduct("americano", 120.0, 70.0, 0.5));
+
+        hot.sort(new PriceComparator());
 
         Iterator<Product> iterator = hwvm.iterator();
         while (iterator.hasNext()) {

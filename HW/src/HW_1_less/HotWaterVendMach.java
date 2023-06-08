@@ -14,7 +14,7 @@ public class HotWaterVendMach implements VendMach, Iterable<Product> {
 
     @Override
     public Product getProduct() {
-        return null;
+        return hot_waters.element();
     }
 
     public ArrayList<Product> getProduct(String name, Double price, Double temperature, Double volume) {
@@ -31,5 +31,15 @@ public class HotWaterVendMach implements VendMach, Iterable<Product> {
     @Override
     public Iterator<Product> iterator() {
         return new HotWaterIterator(hot_waters);
+    }
+
+    @Override
+    public int compare(Product o1, Product o2) {
+        if (o1.price > o2.price)
+            return 1;
+        else if (o1.price < o2.price)
+            return -1;
+        else
+            return 0;
     }
 }
