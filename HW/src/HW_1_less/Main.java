@@ -12,18 +12,8 @@ public class Main {
 
         WaterVendMash wvm = new WaterVendMash();
 
-        Product bonAqua = new Water("bonAqua", 50.0) {
-            @Override
-            public int compareTo(Object o) {
-                return 0;
-            }
-        };
-        Product redKey = new Water("redKey", 60.0) {
-            @Override
-            public int compareTo(Object o) {
-                return 0;
-            }
-        };
+        Product bonAqua = new Water("bonAqua", 50.0) {};
+        Product redKey = new Water("redKey", 60.0) {};
         LinkedList<Product> l = new LinkedList<>();
         l.add(bonAqua);
         l.add(redKey);
@@ -54,7 +44,7 @@ public class Main {
 
         System.out.println(hwvm.getProduct("americano", 120.0, 70.0, 0.5));
 
-        hot.sort(new PriceComparator());
+        hot.sort(Comparator.comparingDouble(o -> o.price));
 
         Iterator<Product> iterator = hwvm.iterator();
         while (iterator.hasNext()) {

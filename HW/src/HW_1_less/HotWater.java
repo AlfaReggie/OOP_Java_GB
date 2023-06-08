@@ -41,18 +41,15 @@ public class HotWater extends Water{
     }
 
     @Override
-    public int compareTo(Object o) {
+    public int compareTo(Product o) {
+    if (this.price > o.price)
+        return 1;
+    else if (this.price < o.price)
+        return -1;
+    else
         return 0;
     }
 
-    public int compareTo(Product o) {
-        if (this.price > o.price)
-            return 1;
-        else if (this.price < o.price)
-            return -1;
-        else
-            return 0;
-    }
 
     public Double getTemperature() {
         return temperature;

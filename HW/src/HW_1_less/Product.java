@@ -1,6 +1,6 @@
 package HW_1_less;
 
-public abstract class Product implements Comparable{
+public abstract class Product implements Comparable<Product>{
 
 
     // Реализуйте класс Товар, содержащий данные о товаре, и ТорговыйАвтомат,
@@ -22,6 +22,6 @@ public abstract class Product implements Comparable{
     public abstract void setPrice(Double price);
 
     @Override
-    public abstract int compareTo(Object o);
+    public abstract int compareTo(Product o);
 
 }
